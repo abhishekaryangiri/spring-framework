@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\bitto\Desktop\jar\mvcrest"/>
+			<item value="C:\Users\bitto\Desktop\jar\bihar"/>
 			<item value="E:\SpringBoot1"/>
 		</list>
 		<list key="projectNameTemplate">
