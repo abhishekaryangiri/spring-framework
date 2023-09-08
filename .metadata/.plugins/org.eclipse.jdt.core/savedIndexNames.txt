@@ -102,7 +102,6 @@ INDEX VERSION 1.131+C:\Users\bitto\Desktop\GitHub\spring\.metadata\.plugins\org.
 3815533105.index
 1470356069.index
 212830545.index
-864352062.index
 1204795958.index
 3950716389.index
 4211620281.index
