@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<f:form modelAttribute="m">
+<table border="3" bgcolor="yellow">
+<tr><td>RID</td>
+
+<td>
+
+<f:select path="rid">
+<f:option value="0">-Select-</f:option>
+<f:options items="${rid}" itemValue="rid" itemLabel="rid"/>
+</f:select>
+
+
+</td>
+
+</tr>
+<tr><td><input type="submit"></td></tr>
+</table>
+</f:form>
+
+</body>
+</html>
