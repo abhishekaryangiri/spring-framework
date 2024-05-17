@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           <!-- here we are using p:schema - using p schema we dont nood to use property tag and value tag we can directly use bean tag/ it reduce boiler palte -->
+           <bean class="com.springcoreallvalueinbean.spring3core3.Employee" name="employee1"  p:employeeId="1010" p:employeeName="Johny" p:employeeDesignation="php developer" p:employeeDepartment="Technology" p:employeePhone="8888888888"/>
+           
+           <bean class="com.springcoreallvalueinbean.spring3core3.Employee" name="employee2" p:employeeId="4040" p:employeeName="Mansingh" p:employeeDesignation="Finance head" p:employeeDepartment="Finance" p:employeePhone="9898989898"/>
+           
+           
+           
+           
+           </beans>
+
+
