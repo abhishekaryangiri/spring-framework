@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%@taglib uri="http://www.springframework.org/tags/form"  prefix="f"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body  style=" background-color: #405d27;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);">
+
+<f:form action="saveUpdate" modelAttribute="m">
+<table  style="background-color: #DAF7A6;font-family: sans-serif;font-size: 20px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; padding: 40px;justify-content: center;margin: auto; ">
+
+<tr><td colspan="4">Update Records for This RID ${rbean.rid}<f:hidden path="rid" value="${rbean.rid}" />  </td></tr>
+<tr><td>State Name</td><td> ${rbean.stName} <f:hidden path="stCode" value="${rbean.stCode}"  /> </td> 
+<td>District Name</td><td>${rbean.distName} <f:hidden path="distCode" value="${rbean.distCode}"  /> </td>
+</tr>
+ 
+ <tr><td> Name</td><td><f:input path="name" value="${rbean.name}" readonly="true" /> </td> 
+<td>Phone/Address</td><td><f:input path="phone" value="${rbean.phone}"  /> </td>
+
+ </tr>
+ 
+ <tr><td><input type="submit" value="UPDATE"></td></tr>
+</table>
+
+</f:form>
+
+</body>
+</html>

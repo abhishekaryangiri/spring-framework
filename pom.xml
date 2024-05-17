@@ -2,12 +2,21 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
   <groupId>com.springcoreallvalueinbean</groupId>
   <artifactId>spring3core3</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>spring3core3</name>
+=======
+  <groupId>com.springcorevalue</groupId>
+  <artifactId>spring2core2</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>spring2core2</name>
+>>>>>>> f2ef3b3ef212502c3391a1951b559c7862bfcb82
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -17,7 +26,11 @@
   <dependencies>
 	  
 	  
+<<<<<<< HEAD
 	  	  <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+=======
+	  <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+>>>>>>> f2ef3b3ef212502c3391a1951b559c7862bfcb82
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-core</artifactId>

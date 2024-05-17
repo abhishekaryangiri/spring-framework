@@ -1,0 +1,85 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	$("#stcode").change(function(){
+		 alert("hi");
+		$.ajax({
+		    url : "dist?stCode="+$("#stcode").val(),
+		    type: "GET",
+		    success: function(data)
+		    {
+		    	alert(data);
+		        console.log(data);
+		        $("#dcode").empty();
+		        
+		        for(var i=0; i<data.length; i++ ){
+		        	$("#dcode").append("<option value="+data[i].distCode+">"+data[i].distname+"</option>");
+		        }
+		    },
+		    error: function (errorThrown)
+		    {
+		    	console.log(errorThrown);
+		 
+		    }
+		   });
+		 
+	});
+	
+});
+
+</script>
+
+</head>
+<body  style=" background-color: #405d27;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);">
+
+<f:form action="regSave" modelAttribute="r">
+<table  style="background-color: #DAF7A6;font-family: sans-serif;font-size: 20px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; padding: 40px;justify-content: center;margin: auto; ">
+<tr>
+
+<td>State Name</td> 
+
+<td>
+
+<f:select path="stCode" id="stcode">
+<f:option value="0">-Select-</f:option>
+<f:options items="${stList}" itemValue="stCode" itemLabel="stName"/>
+</f:select>
+
+
+</td>
+
+
+<td>District Name</td> 
+
+
+<td><f:select path="distCode" id="dcode">
+
+</f:select></td>
+
+
+
+ </tr>
+<tr><td>Name</td> <td><f:input path="name"/></td><td>Phone</td> <td><f:input path="phone"/></td> </tr>
+<!-- <tr> <td><input type="submit" value="REgis"></td> </tr> -->
+<tr> <td><input type="submit" value="Registration"></td> </tr>
+
+ </table>
+
+</f:form>
+
+</body>
+</html>
