@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>spring3core3</name>
+=======
 	<name>spring2core2</name>
+>>>>>>> f2ef3b3ef212502c3391a1951b559c7862bfcb82
 	<comment></comment>
 	<projects>
 	</projects>
