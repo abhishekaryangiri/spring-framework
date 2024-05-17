@@ -16,7 +16,7 @@ public class App
       Employee employee1 = (Employee) context.getBean("employee1");
       System.out.println(employee1);
       
-		/* employee2 */
+		/* employee2 detaails setup */
       Employee employee2 = (Employee) context.getBean("employee2");
       System.out.println(employee2);
     }
