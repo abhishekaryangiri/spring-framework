@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body  style=" background-color: #405d27;
+ /* position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); */
+  ">
+<table style="background-color: #DAF7A6;font-family: sans-serif;font-size: 20px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; padding: 40px;justify-content: center;margin: auto; width: 90%; "> 
+<tr style="color: red; justify-content: center;"><td>Reg ID</td><td>State Name</td><td>District Name</td><td> Name</td><td>Address</td></tr>
+<br>
+<c:forEach items="${lst}" var="b">
+<tr><td><c:out value="${b.rid}"></c:out></td>
+<td><c:out value="${b.stCode}"></c:out></td>
+<td><c:out value="${b.distCode}"></c:out></td>
+<td><c:out value="${b.name}"></c:out></td>
+<td><c:out value="${b.phone}"></c:out></td>
+
+</tr>
+
+</c:forEach>
+
+<tr >
+<br><td colspan="5"><a href=DownloadPDF style="text-decoration: none;color: blue; ">DOWNLOAD PDF</a></td><td><a href=reg  style="text-decoration: none;color: blue;">BACK</a></td></tr>
+
+
+
+</table>
+
+</body>
+</html>

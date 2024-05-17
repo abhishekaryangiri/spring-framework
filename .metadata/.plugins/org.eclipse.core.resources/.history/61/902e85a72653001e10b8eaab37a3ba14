@@ -1,0 +1,65 @@
+package bihar.max;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import bihar.max.master.DistInterface;
+import bihar.max.master.StateBean;
+import bihar.max.master.StateInterface;
+import bihar.max.reg.RegDTO;
+import bihar.max.reg.RegInterface;
+import bihar.max.view.CommanBean;
+
+@Controller
+public class ModiFyController {
+	@Autowired
+	RegDTO regDTO;
+	@Autowired
+	RegInterface regInterface;
+	@Autowired
+	StateInterface stateInterface;
+	@Autowired
+	DistInterface distInterface;
+	@Autowired
+	CommanBean cb ;
+@RequestMapping(value = "viewModifyDetail",method = RequestMethod.POST)
+	public String viewModify(@ModelAttribute("m")RegDTO regDTO,ModelMap m)
+	{
+	
+	
+	System.out.println("regDTO "+regDTO.getRid());
+	RegDTO rb = regInterface.getRegDTOByRid(regDTO.getRid());
+	cb.setDistCode(rb.getDistCode());
+	cb.setStCode(rb.getStCode());
+	cb.setName(rb.getName());
+	cb.setPhone(rb.getPhone());
+	StateBean b = stateInterface.getStateBeanByStCode(Integer.parseInt(rb.getStCode()));
+	cb.setStName(b.getStName());
+	cb.setRid(regDTO.getRid());
+	cb.setDistName(distInterface.getDistBeanByDistCode(rb.getDistCode()).getDistname());
+	m.addAttribute("rbean", cb);
+	
+		return "viewModify";
+		
+	
+	}
+
+@RequestMapping(value = "saveUpdate",method = RequestMethod.POST)
+public String getUpdateData(@ModelAttribute("m") CommanBean cb)
+{
+	System.out.println("r "+cb.getStCode()+" "+cb.getDistCode()+" "+cb.getName()+" "+cb.getPhone()+" "+cb.getRid());
+	
+	return "S";
+}
+
+	
+}
