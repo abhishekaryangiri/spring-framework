@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean class="com.springcorevalue.spring2core2.Employee" name="employee1">
+				<!--  previously we r using different tags for both property and value, now we will write both in property tag -->
+				<property name="employeeId" value="0046"/>
+				<property name="employeeName" value="Rohit Sharma"/>
+				<property name="employeeDesignation" value="Phython Developer"/>
+				<property name="employeeDepartment" value="Technology"/>
+		</bean>
+		
+		
+		<bean class="com.springcorevalue.spring2core2.Employee" name="employee2">
+				<property name="employeeId" value="2089"/>
+				<property name="employeeName" value="Shayam"/>
+				<property name="employeeDesignation" value="Angular developer"/>
+				<property name="employeeDepartment" value="Technology"/>
+		</bean>
+
+</beans>
