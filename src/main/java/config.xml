@@ -5,6 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
            
+
            <!-- here we are using p:schema - using p schema we dont nood to use property tag and value tag we can directly use bean tag/ it reduce boiler palte -->
            <bean class="com.springcoreallvalueinbean.spring3core3.Employee" name="employee1"  p:employeeId="1010" p:employeeName="Johny" p:employeeDesignation="php developer" p:employeeDepartment="Technology" p:employeePhone="8888888888"/>
            
